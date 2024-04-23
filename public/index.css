@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html{
+    background-color: #E4E5E2;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+}
+#cart{
+    #add{
+        background-color: aquamarine;
+    }
+    #clear{
+        background-color: red;
+    }
+    #order{
+        background-color: white;
+        border: 2px solid black;
+        overflow: scroll;
+        overflow-x: hidden;
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            border-bottom: 1px solid gray;
+            th{
+                border-bottom: 1px solid gray;
+                border-right: 1px solid gray;
+            }
+            td{
+                border-right: 1px solid gray;
+                padding: 0 5px;
+            }
+            .qty{
+                text-align: center;
+                min-width: 30px;
+            }
+            .price{
+                min-width: 100px;
+            }
+            .delete-button{
+                text-align: center;
+                border: 1px solid gray;
+                a{
+                    color: red;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    #checkout{
+        background-color: green;
+    }
+}
+#inventory{
+    input{
+        background-color: burlywood;
+    }
+}
+
+/* Small phones */
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 20px;
+    }
+    #cart{
+        width: 90%;
+        min-width: 380px;
+        margin: 0 auto;
+        #search{
+            width: 100%;
+            margin-bottom: 10px;
+            #search-bar{
+                width: 63%;
+            }
+            input{
+                width: 15%;
+                padding: 5px;
+            }
+        }
+        #order{
+            width: 100%;
+            margin: 0 auto;
+            min-height: 400px;
+        }
+        #checkout{
+            padding: 5px;
+        }
+    }
+    #inventory{
+        width: 90%;
+        margin: 0 auto;
+        input{
+            padding: 5px;
+        }
+    }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 768px) {
+    #cart{
+        width: 70%;
+        display: inline-block;
+        vertical-align: middle;
+        #order{
+            min-height: 400px;
+        }
+    }
+    #inventory{
+        width: 25%;
+        margin: 0 auto;
+        display: inline-block;
+        input{
+            padding: 5px;
+        }
+    }
+}
+
+/* Large devices (big tablets, laptops, smaller monitors) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Larger screens (monitor) */
+@media only screen and (min-width: 1124px) {
+    #order{
+        width: 60%;
+        min-height: 400px;
+    }
+    #search{
+        width: 60%;
+        #search-bar{
+            width: 63%;
+        }
+        input{
+            width: 15%;
+            padding: 10px;
+        }
+    }
+}
