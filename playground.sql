@@ -18,3 +18,24 @@ USE store_pos;
 SELECT * FROM types
 LEFT JOIN items
 ON types.id = items.type_id;
+-- WHERE item_name LIKE '%te%';
+
+-- INSERT INTO cart (is_discounted, is_paid, is_checked_out, created_at, updated_at)
+-- values (0, 0, 0, now(), now());
+
+-- delete from cart_items where id > 15;
+-- update cart set total_price = 35 where id = 2;
+
+-- INSERT INTO cart_items (cart_id, item_id, price_during_purchase, quantity, total_price, created_at, updated_at)
+-- values (2, 5, 20, 2, 40, now(), now());
+
+SELECT * FROM cart
+LEFT JOIN cart_items
+ON cart.id = cart_items.cart_id
+LEFT JOIN items
+ON cart_items.item_id = items.id
+WHERE cart.is_checked_out = 0;
+
+-- SELECT * from cart_items;
+-- SELECT SUM(total_price) FROM cart_items
+-- WHERE cart_id = 2;
